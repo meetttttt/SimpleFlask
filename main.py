@@ -25,7 +25,7 @@ logging.basicConfig(filename=os.getenv("LOG_FILE"),
 
 
 # first route / testing route
-@app.route('/home', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_route():
     logging.info('Testing route accessed.')
     return jsonify({"message": "Working..!"}), 200
